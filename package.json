@@ -1,0 +1,13 @@
+{
+  "name": "vue-remark",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/vue-remark": "^0.1.3",
+    "gridsome": "^0.7.0"
+  }
+}
