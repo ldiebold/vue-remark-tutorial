@@ -9,8 +9,8 @@
 </template>
 
 <page-query>
-query Documentation {
-  docs: allDocumentation {
+query Post {
+  docs: allPost {
     edges {
       node {
         title

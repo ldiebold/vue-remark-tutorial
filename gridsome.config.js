@@ -10,10 +10,10 @@ module.exports = {
     {
       use: '@gridsome/vue-remark',
       options: {
-        typeName: 'Documentation',
-        baseDir: './docs',
-        pathPrefix: '/docs',
-        template: './src/templates/Documentation.vue'
+        typeName: 'Post',
+        baseDir: './posts',
+        pathPrefix: '/posts',
+        template: './src/templates/Post.vue'
       }
     }
   ]
