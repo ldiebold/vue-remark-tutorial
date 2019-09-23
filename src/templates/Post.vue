@@ -8,7 +8,11 @@
 
     <span>{{ $page.post.created_at }}</span>
 
-    <VueRemarkContent />
+    <VueRemarkContent>
+      <template v-slot:ad>
+        <Ad />
+      </template>
+    </VueRemarkContent>
   </div>
 </template>
 
@@ -23,7 +27,7 @@ query Post($id: ID!) {
 </page-query>
 
 <script>
-
+import Ad from '../components/Ad'
 
 export default {
   props: {
@@ -31,7 +35,7 @@ export default {
   },
 
   components: {
-
+    Ad,
   },
 
   computed: {
