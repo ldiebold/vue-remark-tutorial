@@ -25,6 +25,7 @@ module.exports = {
         pathPrefix: '/posts',
         template: './src/templates/Post.vue',
         includePaths: ['./src/sections'],
+        route: '/blog/:slug',
         refs: {
           tags: 'Tag'
         }

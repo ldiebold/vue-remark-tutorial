@@ -1,4 +1,5 @@
 ---
+slug: index
 title: My Posts Index
 author: Luke Diebold
 created_at: 2019-09-22T09:30:00.788Z
