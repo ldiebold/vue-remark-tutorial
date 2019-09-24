@@ -10,10 +10,23 @@ module.exports = {
     {
       use: '@gridsome/vue-remark',
       options: {
+        typeName: 'Tag',
+        baseDir: './tags',
+        pathPrefix: '/tags',
+        template: './src/templates/Tag.vue'
+      }
+    },
+
+    {
+      use: '@gridsome/vue-remark',
+      options: {
         typeName: 'Post',
         baseDir: './posts',
         pathPrefix: '/posts',
-        template: './src/templates/Post.vue'
+        template: './src/templates/Post.vue',
+        refs: {
+          tags: 'Tag'
+        }
       }
     }
   ]

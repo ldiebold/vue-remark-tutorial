@@ -8,6 +8,18 @@
 
     <span>{{ $page.post.created_at }}</span>
 
+    <br />
+
+    <strong>Tags: </strong>
+
+    <span
+      v-for="tag in $page.post.tags"
+      :key="tag.id"
+      :style="`background: ${tag.color}; border-radius: 4px; margin: 12px; padding: 4px;`"
+    >
+      <g-link :to="tag.path">{{ tag.id }}</g-link>
+    </span>
+
     <VueRemarkContent>
       <template v-slot:ad>
         <Ad />
@@ -22,6 +34,11 @@ query Post($id: ID!) {
     title
     author
     created_at
+    tags {
+      id
+      color
+      path
+    }
   }
 }
 </page-query>
