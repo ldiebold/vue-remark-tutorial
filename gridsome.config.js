@@ -24,6 +24,7 @@ module.exports = {
         baseDir: './posts',
         pathPrefix: '/posts',
         template: './src/templates/Post.vue',
+        includePaths: ['./src/sections'],
         refs: {
           tags: 'Tag'
         }
