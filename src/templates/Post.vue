@@ -2,7 +2,11 @@
   <div style="margin: 0 auto; max-width: 700px;">
     <h1>{{ $page.post.title }}</h1>
 
-    <strong>Author: </strong><span>{{ $page.post.author }}</span>
+    <strong>Author: </strong>
+
+    <span v-for="author in $page.post.authors" :key="author.id">
+      {{ author.name }},
+    </span>
 
     <br />
 
@@ -25,6 +29,10 @@
         <Ad />
       </template>
     </VueRemarkContent>
+
+    <div v-for="comment in $page.post.comments" :key="comment.id">
+      {{ comment.body }}
+    </div>
   </div>
 </template>
 
@@ -32,7 +40,12 @@
 query Post($id: ID!) {
   post(id: $id) {
     title
-    author
+    authors {
+      name
+    }
+    comments {
+      body
+    }
     created_at
     tags {
       id

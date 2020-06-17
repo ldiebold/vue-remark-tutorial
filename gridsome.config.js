@@ -20,6 +20,24 @@ module.exports = {
     {
       use: '@gridsome/vue-remark',
       options: {
+        typeName: 'Author',
+        baseDir: './authors',
+        pathPrefix: '/authors',
+      }
+    },
+
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Comment',
+        baseDir: './comments',
+        pathPrefix: '/comments',
+      }
+    },
+
+    {
+      use: '@gridsome/vue-remark',
+      options: {
         typeName: 'Post',
         baseDir: './posts',
         pathPrefix: '/posts',
@@ -27,7 +45,9 @@ module.exports = {
         includePaths: ['./src/sections'],
         route: '/blog/:slug',
         refs: {
-          tags: 'Tag'
+          tags: 'Tag',
+          authors: 'Author',
+          comments: 'Comment',
         }
       }
     }
